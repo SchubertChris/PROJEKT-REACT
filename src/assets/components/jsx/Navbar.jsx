@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Navbar.css";
+import "../../components/styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 import HomeImage from "./HomeImage";
