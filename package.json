@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://SchubertChris.github.io/PROJEKTE-REACT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
