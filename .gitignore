@@ -25,3 +25,5 @@ dist-ssr
 
 # Zips
 *.zip
+
+!src/assets/components/styles/Navbar.css
