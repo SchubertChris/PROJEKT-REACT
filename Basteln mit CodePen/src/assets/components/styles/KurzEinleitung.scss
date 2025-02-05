@@ -1,0 +1,221 @@
+@font-face {
+  font-family: 'PP Neue Corp';
+  src: url('https://cdn.prod.website-files.com/6717aac16c9ea22eeef1e79e/6717de2d56e40b921572d2d9_PPNeueCorp-TightUltrabold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #ff0000;
+  --color-neutral-300: #2d004b52;
+  --color-neutral-600: #fcfcfc;
+}
+
+.cloneable {
+  padding: var(--container-padding, 0);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.looping-words {
+  width: 90vh;
+  height: 2.7em;
+  padding-left: .1em;
+  padding-right: .1em;
+  font-size: 11vw;
+  line-height: .9;
+  position: relative;
+  overflow: hidden;
+}
+
+.looping-words__list {
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-flow: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'PP Neue Corp', sans-serif;
+  font-weight: 700;
+  list-style: none;
+  display: flex;
+  position: relative;
+}
+
+.looping-words__fade {
+  border-radius: 20px;
+  background-image: linear-gradient(
+    180deg,
+    var(--color-neutral-300, #35263fb2) 5%,
+    transparent 40%,
+    transparent 60%,
+    var(--color-neutral-300, #170d358f) 95%
+  );
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.looping-words__selector {
+  pointer-events: none;
+  width: 100%;
+  height: .9em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.looping-words__edge {
+  border-top: .035em solid var(--color-primary, #9000c9);
+  border-left: .035em solid var(--color-primary, #ffffff);
+  width: .125em;
+  height: .125em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.looping-words__edge.is--2 {
+  left: auto;
+  right: 0;
+  transform: rotate(90deg);
+}
+
+.looping-words__edge.is--3 {
+  inset: auto 0 0 auto;
+  transform: rotate(180deg);
+}
+
+.looping-words__edge.is--4 {
+  top: auto;
+  bottom: 0;
+  transform: rotate(270deg);
+}
+
+.looping-words__containers {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.looping-words__p {
+  margin: 0;
+}
+.skill-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background: #0201018f;
+  border-radius: 10px;
+  margin-bottom: 200px;
+  border-bottom: 1px solid white;
+}
+
+.skill-card {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.089);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 200px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: #ffffff6c 1px solid;
+  padding: 1rem;
+  box-shadow: #e0e0e0 0 0 10px;
+  transition: all 0.3s ease;
+}
+
+.s-lvl{
+  font-size: 1rem;
+  color: #ffffff;
+  background: #f79a0fa2;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.skill-card:hover {
+  transition: all 0.3s ease;
+  border: #f7a60f98 1px solid;
+  transform: translateY(-10px);
+  box-shadow: #3a0ff7 0 0 10px;
+}
+
+.skill-card__content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.skill-image {
+  width: 100px;
+  height: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.skill-progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-card:hover .skill-progress-container {
+  opacity: 1;
+  background-color: #e0e0e0;
+}
+
+.skill-progress-bar {
+  height: 100%;
+  background-color: #f7930f;
+  transition: width 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover .skill-progress-bar {
+  box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b;
+}
+
+@media (max-width: 1280px) {
+  .skill-container {
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .skill-card {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-container {
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .skill-card {
+    flex: 0 0 calc(100% - 1rem);
+  }
+}

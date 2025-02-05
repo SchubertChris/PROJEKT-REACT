@@ -1,0 +1,123 @@
+.menu-icon {
+  position: fixed;
+  right: 130px;
+  top: 90px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  text-shadow: 1px 1px 1px #000;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.678), rgba(128, 0, 128, 0.589));
+  border-radius: 10px;
+  border: 1px solid #000;
+  outline: 1px solid #fff;
+  z-index: 2010;
+}
+.menu-icon:hover {
+  transform: scale(1.2);
+  transition: all 0.2s;
+  color: #ffffff;
+}
+.menu-icon:active {
+  transform: scale(1);
+  color: #8e44ad;
+}
+@media (max-width: 768px) {
+  .menu-icon {
+    right: 50px;
+    top: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .menu-icon {
+    right: 20px;
+    top: 50px;
+  }
+}
+
+.links {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.3), rgba(0, 0, 0, 0.3));
+  width: 200px;
+  border-radius: 8px;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100px);
+  border: 1px solid #000;
+  outline: 1px solid #ffffff;
+  z-index: 2000;
+}
+.links:hover {
+  box-shadow: 0 0 10px purple;
+}
+.links.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.links.show li {
+  animation: slideInRight 0.5s;
+}
+.links a {
+  text-decoration: none;
+}
+.links li {
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 0.8rem;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0);
+  outline: 1px solid rgba(0, 0, 0, 0);
+}
+.links li:hover {
+  background-color: #9b59b6;
+  border-radius: 0.5rem;
+  transform: translateX(0.8rem);
+  border-right: #8e44ad 10px solid;
+  box-shadow: 0 0 10px purple;
+  outline: 1px solid #ffffff;
+}
+@media (max-width: 768px) {
+  .links {
+    top: 120px;
+    right: 20px;
+    width: 180px;
+  }
+  .links li {
+    font-size: 1.2rem;
+    padding: 0.6rem;
+  }
+}
+@media (max-width: 480px) {
+  .links {
+    top: 100px;
+    right: 15px;
+    width: 160px;
+  }
+  .links li {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=navbar.css.map */

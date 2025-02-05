@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* Import custom font */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.Kontakt-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  background: rgba(2, 1, 1, 0.5607843137);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Form styles */
+#msform {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+
+#msform fieldset {
+  border: none;
+  border-radius: 8px;
+  box-shadow: none;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  position: relative;
+  background: transparent;
+}
+
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/* Inputs */
+#msform input, #msform textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff; /* Gut lesbare Farbe */
+  outline: rgba(255, 255, 255, 0);
+  background: rgba(66, 66, 66, 0.329);
+  box-shadow: inset 0 0 10px rgba(96, 8, 168, 0.425);
+}
+
+#msform input:focus, #msform textarea:focus {
+  border-color: #6c0bff;
+  box-shadow: 0 0 20px rgba(108, 11, 255, 0.7);
+  outline: white 1px solid;
+}
+
+/* Buttons */
+#msform .action-button {
+  width: 100px;
+  font-weight: bold;
+  border: 2px solid #6c0bff;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px 5px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  color: #ffffff; /* Gut lesbare Farbe */
+  outline: rgba(255, 255, 255, 0) 1px solid;
+  box-shadow: 0 0 10px rgba(108, 11, 255, 0.5);
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+  background: #6c0bff;
+  color: white;
+  box-shadow: 0 0 20px rgba(108, 11, 255, 0.7);
+  outline: white 1px solid;
+}
+
+/* Headings */
+.fs-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff; /* Gut lesbare Farbe */
+  margin-bottom: 10px;
+}
+
+/* Progress bar */
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+  text-shadow: #6c0bff 0 0 10px;
+}
+
+#progressbar li {
+  list-style-type: none;
+  color: #e6e6e6;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 33.33%;
+  float: left;
+  position: relative;
+  background: transparent;
+}
+
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  height: 20px; /* Added height to make it visible */
+  line-height: 20px;
+  display: block;
+  font-size: 12px;
+  color: #fff;
+  background: #211e27;
+  border-radius: 50%;
+  margin: 0 auto 5px auto;
+  border: 1px solid #ffffff;
+}
+
+#progressbar li:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ddd;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1;
+}
+
+#progressbar li:first-child:after {
+  content: none;
+}
+
+#progressbar li.active:before, #progressbar li.active:after {
+  background: #6c0bff;
+  color: white;
+}
+
+span.error {
+  color: #e74c3c;
+  display: block;
+  margin-top: 5px;
+}
+
+#msform input::-moz-placeholder, #msform textarea::-moz-placeholder {
+  color: #ffffff; /* Weiße Farbe */
+}
+
+#msform input::placeholder, #msform textarea::placeholder {
+  color: #ffffff; /* Weiße Farbe */
+}/*# sourceMappingURL=Kontakt.css.map */

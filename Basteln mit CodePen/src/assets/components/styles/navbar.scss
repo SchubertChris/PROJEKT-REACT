@@ -1,0 +1,130 @@
+
+
+.menu-icon {
+  position: fixed;
+  right: 130px;
+  top: 90px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  text-shadow: 1px 1px 1px #000;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.678), rgba(128, 0, 128, 0.589));
+  border-radius: 10px;
+  border: 1px solid #000;
+  outline: 1px solid #fff;
+  z-index: 2010;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: all 0.2s;
+    color: #ffffff; // purple color
+  }
+
+  &:active {
+    transform: scale(1);
+    color: #8e44ad;
+  }
+
+  @media (max-width: 768px) {
+    right: 50px;
+    top: 70px;
+  }
+
+  @media (max-width: 480px) {
+    right: 20px;
+    top: 50px;
+  }
+}
+
+.links {
+  user-select: none;
+  position: fixed;
+  top: 150px;
+  right: 20px;
+  background: linear-gradient(135deg, rgba(75, 0, 130, 0.3), rgba(0, 0, 0, 0.3)); // gradient with purple and black
+  width: 200px;
+  border-radius: 8px;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100px);
+  border: 1px solid #000;
+  outline: 1px solid #ffffff;
+  z-index: 2000;
+
+  &:hover {
+    box-shadow: 0 0 10px purple;
+
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+
+    li {
+      animation: slideInRight 0.5s;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    font-size: 1.3rem;
+    color: #fff; // white text color
+    padding: 0.8rem;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ffffff00;
+    outline: 1px solid #00000000;
+
+    &:hover {
+      background-color: #9b59b6; // purple background
+      border-radius: 0.5rem;
+      transform: translateX(0.8rem);
+      border-right: #8e44ad 10px solid; // darker purple border
+    box-shadow: 0 0 10px purple;
+    outline: 1px solid #ffffff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    top: 120px;
+    right: 20px;
+    width: 180px;
+
+    li {
+      font-size: 1.2rem;
+      padding: 0.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    top: 100px;
+    right: 15px;
+    width: 160px;
+
+    li {
+      font-size: 1.2rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

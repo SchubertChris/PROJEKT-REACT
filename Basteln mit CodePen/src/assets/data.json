@@ -1,0 +1,70 @@
+[
+  {
+    "skillId": 1,
+    "name": "HTML",
+    "level": "100%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+  },
+  {
+    "skillId": 2,
+    "name": "CSS",
+    "level": "90%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+  },
+  {
+    "skillId": 3,
+    "name": "JavaScript",
+    "level": "40%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+  },
+  {
+    "skillId": 4,
+    "name": "React",
+    "level": "70%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+  },
+  {
+    "skillId": 5,
+    "name": "Node.js",
+    "level": "70%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+  },
+  {
+    "skillId": 6,
+    "name": "MongoDB",
+    "level": "50%",
+    "imageUrl": "https://icon.icepanel.io/Technology/svg/MongoDB.svg"
+  },
+  {
+    "skillId": 7,
+    "name": "Express",
+    "level": "55%",
+    "imageUrl": "https://icon.icepanel.io/Technology/png-shadow-512/Express.png"
+  },
+  {
+    "skillId": 8,
+    "name": "Python",
+    "level": "10%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+  },
+  {
+    "skillId": 9,
+    "name": "Django",
+    "level": "45%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg"
+  },
+  {
+    "skillId": 15,
+    "name": "MySQL",
+    "level": "75%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg"
+  },
+  {
+    "skillId": 17,
+    "name": "Git",
+    "level": "68%",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg"
+  }
+]
+
+

@@ -1,0 +1,248 @@
+
+h1{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+}
+
+.Coding-Slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  box-shadow: 0 30px 50px #000;
+  animation: shadow-animation 2s infinite alternate;
+  opacity: 0.7;
+  transition: opacity 1s;
+  &:hover {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+}
+
+.Coding-Slider .slide .item {
+  border-radius: 20px;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  box-shadow: 0 15px 40px #800080;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transition: .5s;
+}
+
+.slide .item:nth-child(1), .slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 30px 50px #000;
+}
+
+.slide .item:nth-child(2) .content { display: block; }
+
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 440px);
+  overflow: hidden;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+  .name {
+    -webkit-text-stroke: 1px #000;
+    animation: animate 1s ease-in-out .3s 1 forwards;
+  }
+}
+
+
+.Coding-Slider .name {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.Coding-Slider .description {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: animate 1s ease-in-out .3s 1 forwards;
+}
+
+.Coding-Slider button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out .6s 1 forwards;
+  background: #80008086;
+  border: #ffffff 1px solid;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes shadow-animation {
+  from {
+    box-shadow: 0 30px 50px #000;
+  }
+  to {
+    box-shadow: 0 30px 50px #800080;
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  transition: all .3s;
+  color: #fff;
+  bottom: 20px;
+}
+
+.button button {
+  color: white;
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #ffffff;
+  transition: all .3s;
+}
+
+.button button:hover {
+  background: #ababab00;
+  color: #fff;
+  border: 1px solid #fff;
+  transition: all .3s;
+}
+
+
+.cardsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cards {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  font-size: 1.4rem;
+}
+
+.card:hover .card-content {
+  transform: rotateY(.5turn);
+}
+
+.card-content {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+  transition: transform 2s;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2rem;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.card-title {
+  font-size: 3rem;
+  transform: translateZ(5rem);
+}
+
+.card-front {
+  background: linear-gradient(#11111157, #1111116d), url("https://images.unsplash.com/photo-1697163524274-61151834f5f4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwMDQ4MzQzMw&ixlib=rb-4.0.3&q=80&w=1080");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.card-front:before {
+  content: '';
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(7rem);
+  border: 3px solid #fff;
+}
+
+.card:nth-of-type(2)>.card-content>.card-front {
+  background: linear-gradient(#11111157, #1111116d), url("https://images.unsplash.com/photo-1591256684501-3b1b0b6e6c7b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwMDQ4MzQzMw&ixlib=rb-4.0.3&q=80&w=1080");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
